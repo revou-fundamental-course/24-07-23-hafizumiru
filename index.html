@@ -1,18 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Navigation Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirul Travel Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#our-package">Our Package</a></li>
-      <li><a href="#call-us">Call Us</a></li>
-    </ul>
-  </nav>
+    <header>
+        <!-- NAV SECTION -->
+        <section id="headerNavigation">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/Logo.png" alt="Logo" width="50" height="60">
+                    <div class="detailLogo">
+                        <h3>Mirul Travel</h3>
+                        <p>Kemanapun Dimanapun</p>
+                    </div>
+                </div>
+            </a>
+            <nav id="navigation">
+                <a class="menu" href="#headerTitle" onclick="scrollToSectionHome()">Home</a>
+                <a class="menu" href="#ourPackage" onclick="scrollToSectionPackage()">Our Package</a>
+                <a class="menu" href="#callUs" onclick="scrollToSectionCallus()">Call Us</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <!-- TITLE SECTION -->
+        <section id="headerTitle">
+            <h1>Your Trusted Travel Agent's</h1>
+            <p id="subtitle">Your happiness is our hapiness</p>
+        </section>
+        <section id="home">
+            <article id="articleContainer">
+                <div id="slideshowContainer">
+                    <div id="#slideShow">
+                        <div class="mySlides fade">
+                            <img class="images" src="img/Foto1.jpg" alt="Gambar 1">
+                        </div>
+                        <div class="mySlides fade imageHidden">
+                            <img class="images" src="img/Foto2.jpg" alt="Gambar 1">
+                        </div>
+                        <div class="mySlides fade imageHidden">
+                            <img class="images" src="img/Foto3.jpg" alt="Gambar 1">
+                        </div>
+                        <div class="mySlides fade imageHidden">
+                            <img class="images" src="img/Foto4.jpg" alt="Gambar 1">
+                        </div>
+                        <a class="prev" onClick="nextSlides(-1)">&#10094;</a>
+                        <a class="next" onClick="nextSlides(1)">&#10095;</a>
+                    </div>
+                </div>
 
-  <!-- Your website content goes here -->
+                <div style="text-align:center">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
 
+                <div id="articleContent">
+                    <i id="quotes">"Liburan jadi menyenangkan bersama Mirul Travel. Agen travel yang sangat ramah
+                        pengguna dengan banyak opsi perjalanan"</i>
+                    <section id="accountContainer">
+                        <div id="profilePict">
+                            <img src="https://dinamikajambi.com/wp-content/uploads/2021/05/Ibunya-Anaknya-Ngamuk-COD-Hina-Kurir-Blok-Goblok-768x532.jpg"
+                                alt="Profile Picture" width="50" height="50">
+                        </div>
+                        <div id="accountData">
+                            <div id="accountName">
+                                <b>Ibu-ibu Random</b>
+                            </div>
+                            <div id="accountDetail">
+                                <i>Ibu Rumah Tangga</i>
+                                <span>,</span>
+                                <i>28</i>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <hr id="lineHome">
+                <div id="detailProduct">
+                    <p>
+                        Use this space to provide users with more information
+                        about your offer. Consider it a follow-up to your headline
+                        and explain the benefits of your service or product
+                    </p>
+                    <div class="detailContainer">
+                        <h1 class="number">1</h1>
+                        <p>Your first feature, written in the form of a benefit statement</p>
+                    </div>
+                    <div class="detailContainer">
+                        <h1 class="number">2</h1>
+                        <p>Your second feature, written in the form of a benefit statement</p>
+                    </div>
+                    <div class="detailContainer">
+                        <h1 class="number">3</h1>
+                        <p>Your third feature, written in the form of a benefit statement</p>
+                    </div>
+                </div>
+            </article>
+            <section id="formOutside">
+                <aside id="formContainer">
+                    <h3 class="titleSubtitle formTitle">RESERVASI SEKARANG</h3>
+                    <p class="titleSubtitle formDetail">Sales akan menghubungi Anda 1 x 24 jam setelah data kami terima.
+                    </p>
+                    <form action="#" id="form">
+                        <div class="questionGroup">
+                            <label for="name">Your name : </label><br>
+                            <input type="text" id="name" name="name" placeholder="First and last name"><br>
+                            <span id="errorName" class="errorMessage"></span>
+                        </div>
+                        <div class="questionGroup">
+                            <label for="email">Email Address : </label><br>
+                            <!-- Tipe input bukan email karena validasi dilakukan melalui javascript (kalau terdapat kesalahan, pesan tidak muncul jika type input adalah email) -->
+                            <input type="text" id="email" name="email" placeholder="example@gmail.com"><br>
+                            <span id="errorEmail" class="errorMessage"></span>
+                        </div>
+                        <div class="questionGroup">
+                            <label for="pNumber">Phone Number : </label><br>
+                            <input type="text" id="pNumber" name="pNumber" placeholder="08xxxxxxxxxxxx"><br>
+                            <span id="errorPNumber" class="errorMessage"></span>
+                        </div>
+                        <div class="questionGroup">
+                            <label for="interest">What are you interested in? </label><br>
+                            <select id="interest" name="interest">
+                                <option value="" selected disabled>Select option</option>
+                                <option value="Beach">Bali</option>
+                                <option value="Mountain">Japan</option>
+                                <option value="Mountain">Singapore</option>
+                                <option value="Mountain">Bandung</option>
+                                <option value="Mountain">Surabaya</option>
+                            </select> <br>
+                            <span id="errorInterest" class="errorMessage"></span>
+                        </div>
+                        <input type="button" id="submit" name="submit" value="SEND" onclick="validateForm()">
+                    </form>
+                    <div id="modalHidden" class="modal">
+                        <div class="modalHidden">
+                            <img src="img/check.gif" width="100" height="100" alt="user" />
+                            <div>
+                                <h3>SUKSES</h3>
+                                <p>
+                                    Data Anda berhasil terkirim. Silakan tunggu sales menghubungi Anda dalam 1 x 24 jam!
+                                </p>
+                            </div>
+                            <button id="buttonModal" onclick="closeModalSuccess()">Tutup</button>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </section>
+        <section id="ourPackage">
+            <h1 id="packageTitle">Our Package</h1>
+            <article id="packageContainer">
+                <div class="listPackageContainer">
+                    <img src="img/bali.jpg" alt="Location" width="50" height="50">
+                    <div class="detailPackage">
+                        <h3>Bali</h3>
+                        <p>Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                </div>
+                <div class="listPackageContainer">
+                    <img src="img/japan.jpg" alt="Location" width="50" height="50">
+                    <div class="detailPackage">
+                        <h3>Japan</h3>
+                        <p>Travel dan wisata di Japan. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                </div>
+                <div class="listPackageContainer">
+                    <img src="img/singapore.jpg" alt="Location" width="50" height="50">
+                    <div class="detailPackage">
+                        <h3>Singapore</h3>
+                        <p>Travel dan wisata di Singapore. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                </div>
+                <div class="listPackageContainer">
+                    <img src="img/bandung.jpg" alt="Location" width="50" height="50">
+                    <div class="detailPackage">
+                        <h3>Bandung</h3>
+                        <p>Travel dan wisata di Bandung. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                </div>
+                <div class="listPackageContainer">
+                    <img src="img/surabaya.jpg" alt="Location" width="50" height="50">
+                    <div class="detailPackage">
+                        <h3>Surabaya</h3>
+                        <p>Travel dan wisata di Surabaya. Kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                </div>
+                <div class="listPackageContainer">
+                    <img src="img/traveling.jpg" alt="Location" width="50" height="50">
+                    <div class="detailPackage">
+                        <h3>Pilih Tujuanmu Sendiri</h3>
+                        <p>Nikmati kunjugan wisata dalam dan luar negeri</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <hr>
+        <section id="callUs">
+            <h1>Rasakan Keistimewaan Perjalanan Anda dengan Pelayanan Unggulan Kami</h1>
+            <p>"Pelancong cerdas memilih kami sebagai travel agent andalan, karena kami selalu menyediakan harga terbaik, rencana perjalanan yang terkustomisasi, dan rekomendasi destinasi menakjubkan!"
+            </p>
+            <button id="callToAction">
+                CALL TO ACTION
+            </button>
+        </section>
+    </main>
+    <footer>
+        <section id="footerContainer">
+            <a href="index.html">
+                <section class="logo">
+                    <img src="img/Logo.png" alt="Logo" width="50" height="60">
+                    <div class="detailLogo">
+                        <h3>Mirul Travel</h3>
+                        <p>Kemanapun Dimanapun</p>
+                    </div>
+                </section>
+            </a>
+            <section id="linkFooter">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </section>
+            <p>@2023 Shahmirul Hafizullah</p>
+        </section>
+    </footer>
 </body>
+
 </html>
